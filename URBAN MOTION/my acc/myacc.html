@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Motion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="myacc.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="Webverse Studio Logo" style="height: 35px; width: 110px; margin-left: 30px; align-items: center;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../Home terbaru/home(After).html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../Tentangkami/index.html">Tentang kami</a>
+            </li>
+             <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Transportasi umum
+          </a>
+          <ul class="dropdown-menu" style="background-color: #0B2E34; text-align: center;" >
+            <li><a class="dropdown-item" style="background-color: #0B2E34; color: #F3ECDC;" href="../Transportasi After/krl.html">Stasiun KRL</a></li>
+            <li><a class="dropdown-item" style="background-color: #0B2E34; color: #F3ECDC;" href="../Transportasi After/mrt&lrt.html">Stasiun MRT & LRT</a></li>
+            <li><a class="dropdown-item" style="background-color: #0B2E34; color: #F3ECDC;" href="../Transportasi After/tj.html">Halte Transjakarta</a></li>
+          </ul>
+        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Daftar Harga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sewa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="./img/akun.png" alt="my account" style="height: 25px; margin-right: 50px;">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<section class="profil">
+  <div class="header-text">
+    <h1><b>Profil Akun</b></h1>
+  </div>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-section text-center">
+          <img src="img/budi.jpg" alt="Profile Picture" class="profile-image mb-3">
+          <h4>Budiman</h4>
+          <p>budiman@gmail.com</p>
+          <button class="btn btn-primary">Profil Saya</button>
+          <div class="mt-3">
+            <a href="../my histori/histori.html" class="text-secondary">Q Histori</a>
+            <a href="../masuk.html" class="text-secondary ms-3">Q Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="personal-section">
+              <h3>Personal</h3>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" value="Budiman">
+              </div>
+              <div class="mb-3">
+                <label for="tgl-lahir" class="form-label">Tanggal Lahir</label>
+                <input type="text" class="form-control" id="tgl-lahir" value="17 Agustus 1945">
+              </div>
+              <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat</label>
+                <input type="text" class="form-control" id="alamat" value="jalan M.H Thamrin">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-section">
+              <h3>Contact</h3>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" value="budiman@gmail.com">
+              </div>
+              <div class="mb-3">
+                <label for="no-hp" class="form-label">Nomor HP</label>
+                <div class="input-group">
+                  <span class="input-group-text">+62</span>
+                  <input type="text" class="form-control" id="no-hp" value="85785505467">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="instagram" class="form-label">Instagram</label>
+                <input type="text" class="form-control" id="instagram" value="budiman123">
+              </div>
+              <div class="mb-3">
+                <label for="twitter" class="form-label">Twitter</label>
+                <input type="text" class="form-control" id="twitter" value="budimanja">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <img src="./img/logo.png" alt="logo Urban Motion">
+        <p>Website informasi mengenai transportasi umum dan sewa kendaraan dengan layanan profesional di DKI Jakarta.</p>
+        <div class="social-icons" style="margin-top: 20px; text-align: left;">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3 style="text-align: left; margin-left: 12px;">Navigasi</h3>
+        <div class="nav-columns">
+          <ul>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Beranda</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Tentang Kami</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Transportasi Umum</a></li>
+          </ul>
+          <ul>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Daftar Harga</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Sewa</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Kontak</a></li>
+          </ul>
+        </div>
+      </div>        
+      <div class="footer-section">
+        <h3>Tetap bersama kami</h3>
+        <p style="margin: 10px 45px;"><i class="fa fa-map-marker"></i> Surabaya, Indonesia</p>
+        <p  style="margin: 10px 45px;"><i class="fa fa-envelope"></i> UrbanMotion@gmail.com</p>
+        <p  style="margin: 10px 45px;"><i class="fa fa-phone"></i> (+62) 856 0738 5940</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>URBAN MOTION</p>
+    </div>
+  <section>  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+/* Contoh penggunaan ikon FontAwesome dalam CSS */
+.icon {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+body {
+  font-family: "Open Sans";
+  background-color: #f9fffc;
+  margin: 0;
+  padding: 0;
+}
+
+/*navbar */
+.navbar {
+  background-color: #0b2e34;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Open Sans";
+}
+
+.navbar-nav .nav-link {
+  color: #f8f3ed;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.dropdown-menu {
+  display: none; /* Menyembunyikan dropdown secara default */
+}
+.dropdown-toggle.show + .dropdown-menu {
+  display: block; /* Menampilkan dropdown saat tombol diklik */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f8f3ed;
+  padding-left: 100px;
+  padding-right: 650px;
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar elemen */
+}
+
+.hero h1 {
+  margin-top: 0px;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 18px;
+  letter-spacing: 0.5px; /*ngasih spasi*/
+}
+
+/* Responsif untuk layar tablet (lebar maksimal 992px) */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px; /* Memberikan ruang atas agar teks turun lebih banyak */
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Responsif untuk layar ponsel (lebar maksimal 576px) */
+@media (max-width: 480px) {
+  .hero-overlay {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px; /* Memberikan ruang atas agar teks turun lebih banyak */
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+}
+
+/* Layout Utama */
+.services {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 60px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.images {
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+
+.images img {
+  width: 600px;
+  height: 500px;
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #05181c;
+  margin-top: 70px;
+}
+
+.content p {
+  font-size: 19.7px;
+  text-align: justify;
+  color: #05181c;
+}
+
+/* Responsif untuk Tablet (Lebar Maksimal 992px) */
+@media (max-width: 768px) {
+  .services {
+    padding: 20px; /* Mengurangi padding untuk tablet */
+  }
+
+  .container {
+    flex-direction: column; /* Gambar dan teks menjadi kolom di tablet */
+    align-items: center;
+    width: 90%; /* Mengurangi lebar agar lebih rapi */
+    margin: 0 auto;
+  }
+
+  .images {
+    margin: 0 auto 20px auto; /* Center gambar di tablet */
+  }
+
+  .images img {
+    width: 90%; /* Memperkecil gambar untuk tablet */
+    height: auto; /* Menjaga rasio aspek */
+    margin-bottom: 20px;
+  }
+
+  .content {
+    text-align: center; /* Menyelaraskan teks di tengah */
+  }
+
+  .content h2 {
+    font-size: 26px; /* Ukuran font lebih kecil untuk tablet */
+    margin-top: 10px;
+  }
+
+  .content p {
+    font-size: 18px; /* Ukuran font paragraf lebih kecil untuk tablet */
+  }
+}
+
+/* Responsif untuk Ponsel (Lebar Maksimal 576px) */
+@media (max-width: 480px) {
+  .services {
+    padding: 20px;
+  }
+
+  .images img {
+    width: 100%; /* Lebar gambar 100% untuk ponsel */
+    height: 100%;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-direction: column; /* Ubah arah flex menjadi kolom */
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 40px; /* Ukuran font judul */
+  font-weight: bold; /* Menebalkan teks */
+  color: #05181c; /* Warna teks */
+  margin-bottom: 24px; /* Jarak bawah judul */
+  padding: 0 50px;
+  text-align: center;
+}
+
+.features .grid {
+  display: grid; /* Menggunakan grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+  gap: 10px; /* Jarak antar kotak */
+  margin-top: 20px; /* Jarak atas grid */
+  padding: 0 100px;
+}
+
+.card {
+  padding: 20px; /* Padding dalam kartu */
+  border-radius: 8px; /* Sudut membulat */
+}
+
+.card-title {
+  font-size: 1.25em; /* Ukuran font judul kartu */
+  font-weight: 600; /* Menebalkan teks judul kartu */
+  margin-bottom: 8px; /* Jarak bawah judul kartu */
+}
+
+.card-text {
+  color: #555; /* Warna teks dalam kartu */
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px; /* Mengurangi ukuran font judul untuk tablet */
+  }
+
+  .card img {
+    width: 60px !important; /* Mengurangi ukuran gambar di dalam card untuk tablet */
+    height: 60px !important; /* Mengurangi ukuran gambar di dalam card untuk tablet */
+  }
+
+  .card-title {
+    font-size: 1.15em; /* Ukuran font judul di dalam card untuk tablet */
+  }
+
+  .card-text {
+    font-size: 0.95em; /* Mengurangi ukuran font teks di dalam card untuk tablet */
+  }
+}
+
+/* Responsif untuk Ponsel (Lebar Maksimal 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px; /* Ukuran font judul lebih kecil untuk ponsel */
+  }
+
+  .card img {
+    width: 50px !important; /* Ukuran gambar lebih kecil di dalam card untuk ponsel */
+    height: 50px !important;
+    margin-left: -10px;
+  }
+
+  .card-title {
+    font-size: 10px; /* Ukuran font judul di dalam card lebih kecil di ponsel */
+  }
+
+  .card-text {
+    font-size: 10px; /* Ukuran font teks lebih kecil di dalam card untuk ponsel */
+  }
+}
+
+/*Tujuan*/
+.Tujuan {
+  padding: 2rem;
+  background-color: #0b2e34;
+  margin-top: 100px;
+}
+
+.tujuankami {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #f8f3ed;
+}
+
+.subtitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #f8f3ed;
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #f8f3ed;
+}
+
+.box {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.box-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #05181c;
+}
+
+.box-content {
+  margin-top: 1rem;
+}
+
+.mission-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mission-number {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #05181c;
+  margin-right: 1rem;
+}
+
+.mission-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #05181c;
+}
+
+.mission-description {
+  color: #6e6e6e;
+  margin-top: -10px;
+}
+
+.box-description {
+  color: #6e6e6e;
+}
+
+/* Jasa Section */
+.jasa {
+  display: flex; /* Menggunakan flexbox untuk layout */
+  align-items: flex-start; /* Menyelaraskan item di bagian atas */
+  padding: 2rem; /* Memberikan padding di sekitar section */
+}
+
+.page4 {
+  flex: 0 0 250px; /* Lebar tetap untuk gambar */
+  margin-right: 2rem; /* Memberikan jarak antara gambar dan teks */
+}
+
+.page4 img {
+  margin-left: 20px; /* Margin kiri sesuai permintaan */
+  width: 600px; /* Memastikan gambar menyesuaikan lebar kontainer */
+  height: 500px; /* Menjaga proporsi gambar */
+}
+
+.petikatas img {
+  margin-left: 0px; /* Margin kiri sesuai permintaan */
+  width: 50px; /* Memastikan gambar menyesuaikan lebar kontainer */
+  height: 40px; /* Menjaga proporsi gambar */
+  margin-bottom: 10px;
+}
+
+.petikbawah img {
+  margin-left: 500px; /* Margin kiri sesuai permintaan */
+  margin-top: -20px;
+  width: 50px; /* Memastikan gambar menyesuaikan lebar kontainer */
+  height: 40px; /* Menjaga proporsi gambar */
+}
+
+.kalimat p {
+  font-size: 19.7px; /* Ukuran font untuk paragraf */
+  margin-top: 0; /* Menghapus margin atas pada paragraf */
+  text-align: center;
+  color: #05181c;
+}
+
+@media (max-width: 768px) {
+  .petikatas {
+    margin-top: -90px;
+  }
+
+  .petikbawah {
+    margin-left: 160px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jasa {
+    flex-direction: column; /* Menumpuk elemen secara vertikal */
+    align-items: center; /* Memusatkan konten */
+    padding: 1rem; /* Mengurangi padding */
+  }
+
+  .page4 {
+    flex: 0 0 auto; /* Membuat gambar menyesuaikan lebar */
+    margin-right: 0; /* Menghapus margin kanan */
+  }
+
+  .page4 img {
+    width: 100%; /* Membuat gambar menyesuaikan lebar kontainer */
+    height: auto; /* Mengatur tinggi gambar agar proporsional */
+    margin-left: 0; /* Menghapus margin kiri */
+  }
+
+  .petikatas img {
+    margin-left: 0; /* Mengatur margin kiri menjadi nol */
+    margin-top: 10px; /* Menambah jarak atas untuk keterbacaan */
+  }
+
+  .petikbawah {
+    margin-left: -120px;
+    margin-top: 20px;
+  }
+
+  .kalimat p {
+    font-size: 16px; /* Mengurangi ukuran font */
+    padding: 0 10px; /* Memberikan padding samping untuk ruang baca */
+    text-align: center;
+  }
+}
+
+/* Footer Style */
+.footer {
+  font-family: "Open Sans";
+  background-color: #0b2e34;
+  color: #f8f3ed;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  min-width: 200px;
+}
+
+.footer-section img {
+  height: 40px;
+  width: 135px;
+  display: block; /* Mengubah gambar menjadi block-level element */
+  margin-left: 0; /* Atur margin kiri ke 0 atau nilai sesuai keinginan */
+  margin-bottom: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  margin: 0px;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-section ul {
+  list-style: none; /* Menghilangkan bullet atau titik di depan item */
+  padding: 0; /* Menghapus padding default */
+  margin: 0; /* Menghapus margin default */
+}
+
+.nav-columns {
+  display: flex;
+  justify-content: center; /* Pusatkan kolom navigasi di tengah */
+  gap: 50px; /* Jarak antar kolom */
+}
+
+.footer-section ul li a {
+  color: #f8f3ed; /* Mengubah teks menjadi warna putih */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a i {
+  margin-right: 10px; /* Memberi jarak antara ikon caret dan teks */
+  font-size: 14px;
+}
+
+.social-icons a {
+  color: #f8f3ed;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #f8f3ed;
+  padding-top: 10px;
+}
+
+/* Untuk tablet (960px ke bawah) */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Menumpuk elemen footer secara vertikal */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center; /* Mengatur teks di dalam .footer-section menjadi rata tengah */
+  }
+
+  .footer-section img {
+    height: 40px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-section p {
+    text-align: center; /* Rata tengah untuk paragraf */
+  }
+
+  .footer-section h3 {
+    text-align: center !important;
+    margin-left: -15px !important;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    text-align: center !important; /* Menyelaraskan ikon ke tengah */
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px; /* Menambahkan jarak antar ikon */
+    text-align: center;
+  }
+}
+
+/* Untuk ponsel (666px ke bawah) */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .footer-section {
+    min-width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footer-section img {
+    height: 40px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-section p {
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    text-align: center !important;
+    margin-left: -7px !important;
+  }
+
+  .social-icons {
+    margin-top: 20px !important;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .footer-bottom {
+    padding-top: 10px;
+  }
+}

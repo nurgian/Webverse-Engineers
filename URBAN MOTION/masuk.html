@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Daftar Webverse Studio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="containerlogin">
+      <div class="left">
+        <img
+          alt="Webverse Studio Logo"
+          height="200"
+          src="./Tentangkami before/img/logo.png"
+          width="450"
+        />
+      </div>
+      <div class="right">
+        <div class="login-form">
+          <h2 style="text-align: center">Masuk</h2>
+          <p style="text-align: center">
+            Masuk untuk mengakses akun Urban Motion anda.
+          </p>
+          <label for="email"> Email </label>
+          <input id="email" name="email" type="text" />
+          <label for="password"> Password </label>
+          <input id="password" name="password" type="password" />
+          <div class="checkbox-label">
+            <input id="terms" name="terms" type="checkbox" />
+            <label for="terms">
+              Saya menerima syarat &amp; ketentuan yang berlaku
+            </label>
+          </div>
+          <button type="submit" id="registerButton">Masuk</button>
+          <div class="register">
+            <p>Belum punya akun? <a href="daftar.html"> Daftar </a></p>
+            <p>Atau</p>
+            <div class="google-login">
+              <img
+                alt="Google Logo"
+                height="20"
+                src="./Tentangkami before/img/google.png"
+                width="20"
+              />
+              <span> Masuk dengan Google </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="successPopup">
+      <img
+        src="./Tentangkami before/img/masukBerhasil.png"
+        alt="Gambar Berhasil masuk"
+      />
+      <button id="closePopup">Tutup</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("registerButton")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Mencegah pengiriman form
+          // Tampilkan pop-up
+          document.getElementById("popupOverlay").style.display = "block";
+          document.getElementById("successPopup").style.display = "block";
+        });
+
+      document
+        .getElementById("closePopup")
+        .addEventListener("click", function () {
+          // Alihkan ke halaman masuk
+          window.location.href = "Tentangkami/index.html";
+        });
+    </script>
+  </body>
+</html>
